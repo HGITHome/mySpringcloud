@@ -12,7 +12,7 @@ spring:
 eureka:
   client:
     register-with-eureka: false
-    etch-registry: false
+    fetch-registry: false
   #是否拉取注册中心服务，false就是拉取
   server:
     renewal-percent-threshold: 0.45

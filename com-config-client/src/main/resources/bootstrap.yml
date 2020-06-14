@@ -1,0 +1,31 @@
+
+# 服务端口
+server:
+  port: 6002
+#服务名
+spring:
+  application:
+    name: config-client-service
+    #config 服务地址
+  cloud:
+    config:
+      #文件分支
+      label: master
+      #文件名
+      name: config
+      # 文件后缀 类似：config-dev
+      profile: dev
+      uri: http://localhost:8888
+
+# 暴露监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka
