@@ -1,0 +1,26 @@
+
+#配置端口号
+server:
+  port: 7001
+
+#配置服务名称
+spring:
+  application:
+    name: eureka-server
+
+  #是否向注册中心注册自己，false就是不注册自己
+eureka:
+  client:
+    register-with-eureka: false
+    etch-registry: false
+  #是否拉取注册中心服务，false就是拉取
+  server:
+    renewal-percent-threshold: 0.45
+  #springcloud注册中心自我保护意思，在运行期间会去统计心跳失败比例在 15 分钟之内是否低于 45%，开启自我保护机制
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    hostname: localhost
+  #服务注册中心地址
+
+  #注册中心的服务名
